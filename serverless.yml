@@ -19,6 +19,8 @@ custom:
   s3LocalPath: ${self:custom.client.distributionFolder}/
   s3BucketName: ${self:custom.client.bucketName}
 
+  region: eu-west-1
+
 resources:
   Resources:
     WebAppS3Bucket:
