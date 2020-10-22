@@ -1,4 +1,4 @@
-service: Rolling-Scopes-App
+service: rss-aws-test-2
 frameworkVersion: '2'
 
 provider:
@@ -11,7 +11,7 @@ plugins:
 
 custom:
   client:
-    bucketName: rolling-scopes-app
+    bucketName: rss-aws-12345
     distributionFolder: build
     indexDocument: index.html
     manageResources: false
@@ -19,6 +19,7 @@ custom:
   s3LocalPath: ${self:custom.client.distributionFolder}/
   s3BucketName: ${self:custom.client.bucketName}
 
+  stage: dev
   region: eu-west-1
 
 resources:
