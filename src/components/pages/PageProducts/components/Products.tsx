@@ -19,7 +19,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   cardMedia: {
-    paddingTop: '56.25%', // 16:9
+    width: '100%',
+    height: '200px',
+    backgroundSize: 'contain'
   },
   cardContent: {
     flexGrow: 1,
@@ -46,7 +48,7 @@ export default function Products() {
           <Card className={classes.card}>
             <CardMedia
               className={classes.cardMedia}
-              image={`${product.picture}`}
+              image={product.picture}
               title={product.description}
             />
             <CardContent className={classes.cardContent}>

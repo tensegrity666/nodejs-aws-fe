@@ -1,4 +1,4 @@
-service: rss-aws-test-2
+service: rss-aws-frontend
 frameworkVersion: '2'
 
 provider:
@@ -12,7 +12,7 @@ plugins:
 
 custom:
   client:
-    bucketName: rss-aws-12345
+    bucketName: rss-aws-frontend
     distributionFolder: build
     indexDocument: index.html
     manageResources: false
