@@ -1,0 +1,15 @@
+{
+  "extends": "plugin:@typescript-eslint/recommended",
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "max-len": ["warn", 120],
+    "@typescript-eslint/ban-ts-comment": "warn"
+  },
+  "env": {
+    "es6": true
+  }
+}

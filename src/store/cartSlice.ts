@@ -1,4 +1,4 @@
-import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 import {RootState} from 'store/store';
 import {Product} from "models/Product";
 import {CartItem} from "models/CartItem";
@@ -28,7 +28,7 @@ export const cartSlice = createSlice({
     },
     // Use the PayloadAction type to declare the contents of `action.payload`
     removeFromCart: (state, action: PayloadAction<Product>) => {
-      let {items} = state;
+      const {items} = state;
       const {payload: product} = action;
       const existingItem = items.find(i => i.product.id === product.id);
       if (!existingItem) return;
